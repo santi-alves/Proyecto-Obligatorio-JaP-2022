@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(248, 249, 250);
+}
+
 .jumbotron,
 .card-body,
 .container,
@@ -186,5 +190,92 @@ a.custom-card:hover {
 }
 
 .checked {
-  color: orange; 
+ color: orange; 
+ 
 }
+
+
+/* ---- Mis estilos ----- */
+
+.unchecked {
+  color: darkgray;
+  /* color: var(--redbrown); */
+}
+
+#chckbox:checked {
+  background-color: black;
+  border-color: black !important;
+  box-shadow: none !important ; 
+}
+
+.bg-indigo {
+  background: var(--bs-indigo) !important; 
+}
+
+.text-orange {
+  color: var(--bs-orange) !important;
+}
+
+.text-indigo {
+  color: var(--bs-indigo) !important;
+}
+
+.bg-orange {
+  background: var(--bs-orange) !important; 
+}
+
+/* [data-bs-toggle="tooltip"] {
+  background-color: var(--bs-tooltip-bg);
+  var(--bs-tooltip-bg): var(--bs-red); 
+   color: var(--bs-tooltip-bg: --bs-red);
+  background-color: var(--bs-tooltip-bg: --bs-blue); 
+}*/
+
+/* ---- Bootstrap custom colors tests ---- */
+/* #btn-comment {
+  background: var(--bs-orange);
+} */
+/* ---- Fin Bootstrap custom colors tests ---- */
+
+/* #comments-container {
+  background: red;
+} */
+
+/* [data-user-score]:last-of-type {
+  background: red;
+} */
+
+/* ------ ELIMINAR TESTS IMGS ------ */
+
+/* #carousel-images-container:not(:first-child)  {
+  padding: 5rem;
+  background: red;
+} */
+
+/* .ok {
+  color: var(--redOrange : red;) ;
+
+}
+
+#comments-container {
+  background-image: url(https://dummyimage.com/750/);
+  background-repeat: repeat-x;
+  backdrop-filter: multiply;
+  opacity: 0.7;
+  z-index:-1;
+} */
+
+/* :root {
+  --bs-tooltip-bg: --bs-red;
+  --bs-tooltip-bg: --bs-blue;
+  
+
+
+   --redbrown: rgb(110, 34, 34); 
+} */
+
+
+
+/* ------ ELIMINAR TESTS IMGS ------ */
+
+/* ---- Fin Mis estilos ----- */
