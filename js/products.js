@@ -50,7 +50,7 @@ function sortProducts(criteria, array) {
 }
 /* ----------- */
 
-/* --------- Funcion que almacena id de la categoria en almacenamiento local --------- */
+/* --------- Funcion que almacena id del producto en almacenamiento local --------- */
 function setProductID(id) {
   localStorage.setItem("productID", id);
   window.location = "product-info.html";
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         currentProductsArray = resultObj.data.products;
         showProductsList();
         //sortAndShowCategories(ORDER_ASC_BY_NAME, resultObj.data);
-
+        console.log(PRODUCTS_URL + localStorage.getItem("catID") + EXT_TYPE);
         /* ------ Genera el Título de la Categoria segun el nombre de la misma ----- */
         categoryTitle.innerHTML += resultObj.data.catName + ".";
         /* ---------- */
