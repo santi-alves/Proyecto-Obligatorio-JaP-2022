@@ -9,7 +9,8 @@ const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/";
 const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
 const EXT_TYPE = ".json";
 /* ----------------- Definicion de Variables ----------------- */
-const navEmail = document.querySelector("#idNavEmail");
+// --- No se usa mas ??? ---
+//const navEmail = document.querySelector("#idNavEmail");
 const navLogout = document.querySelector("#idLogout");
 
 /* ----------------- Definicion de Funciones  ----------------- */
@@ -48,9 +49,31 @@ let getJSONData = function (url) {
 /* ------------------------------- */
 
 /* ------------- Funcion que muestra email del usuario guardado en localStorage ------------- */
-function loadUserEmail() {
-  return (navEmail.innerHTML = `<a class="nav-link" href="my-profile.html">${localStorage.getItem(
-    "userEmail"
-  )}</a>`);
+function loadUserEmail(cssSlctr) {
+  return (document.querySelector(cssSlctr).innerHTML =
+    localStorage.getItem("userEmail"));
 }
 /* ---------------------------------- */
+
+/* --- Elimina email de local storage TERMINAR --- */
+/* const deleteUserEmail = (logOutBtn) => {
+  logOutBtn.addEventListener("click" => {
+    localStorage.removeItem("userEmail")
+  })
+} */
+/* --- Fin Elimina email de local storage TERMINAR --- */
+
+/* --- Verificacion inicio sesion ---- */
+const logInCheck = () => {
+  if (
+    location.pathname != "/index.html" &&
+    localStorage.getItem("userEmail") === null
+  ) {
+    location.pathname = "/index.html";
+  }
+  console.log("El usuario inició sesión correctamente");
+};
+
+/* document.onload = */ logInCheck();
+//document.onload.call(this);
+/* --- fin Verificacion inicio sesion ---- */

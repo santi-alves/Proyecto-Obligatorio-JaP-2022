@@ -1,8 +1,20 @@
+body {
+  background-color: rgb(248, 249, 250);
+}
+
+*::selection {
+    background: var(--bs-orange);
+    color: var(--bs-light);
+}
+
 .jumbotron,
 .card-body,
 .container,
 .site-header {
   font-family: 'Raleway', serif !important;
+  /* --- Fuentes propias --- */
+ /*  font-family: "Segoe UI", "-apple-system", "Comfortaa", "Roboto", "system-ui", "Helvetica Neue", "Arial", "Noto Sans", "Liberation Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important; */
+ /* --- fin Fuentes propias --- */
 }
 
 .jumbotron .display-4 {
@@ -186,5 +198,142 @@ a.custom-card:hover {
 }
 
 .checked {
-  color: orange; 
+ color: orange; 
+ 
 }
+
+/* ---- Mis estilos ----- */
+.unchecked {
+  color: lightgray;
+}
+
+*:focus {
+    box-shadow: none !important;
+}
+
+#chckbox:checked {
+  background-color: var(--bs-indigo);
+  border-color: var(--bs-indigo) !important;
+  box-shadow: none !important ; 
+}
+
+a:hover {
+ color: var(--bs-yellow) !important;
+}
+
+
+.bg-indigo {
+  background: var(--bs-indigo) !important; 
+}
+
+.text-orange {
+  color: var(--bs-orange) !important;
+}
+
+.text-indigo {
+  color: var(--bs-indigo) !important;
+}
+
+.bg-orange {
+  background: var(--bs-orange) !important; 
+}
+
+.border-start-orange {
+  border-color: var(--bs-orange) !important;
+}
+
+.border-start-indigo {
+  border-color: var(--bs-indigo) !important;
+}
+
+.border-start-light-indigo {
+  border-color: rgba(224, 215, 239, 0.48) !important;
+}
+
+.btn-outline-orange {
+  border-color: var(--bs-orange) !important;
+  color: var(--bs-orange) !important;
+}
+
+.btn-outline-orange-hover:hover{
+  background: var(--bs-orange)!important;
+  color: var(--bs-light) !important;
+}
+
+.btn-indigo-hover:hover {
+  color: var(--bs-orange) !important;
+}
+
+.box-shadow-focus-none:focus {
+  box-shadow: none !important;
+}
+
+.rounded-start-pill {
+  border-radius: 50rem 0 0 50rem !important;
+}
+
+.rounded-end-pill {
+  border-radius: 0 50rem 50rem 0 !important;
+}
+
+.rounded-borders {
+  border-radius: 1rem !important;
+}
+
+.min-height-100 {
+  min-height: 100% !important;
+}
+
+/* ---- navbar(revisar) ---- */
+.z-index-auto {
+ /*  position: sticky !important; */
+  z-index: auto !important;
+  top: 4rem !important;
+}
+
+.gradient-indigo-semi-transparent {
+  /* filter: opacity(0.9) !important; */
+ background-image: linear-gradient(to bottom, rgba(102, 16, 242, 1), rgba(102, 16, 242, 0.9)) !important;
+  backdrop-filter: blur(0.25rem) !important;  
+} 
+
+.dropdown-item-active:active {
+  background-color: rgba(211 186 255 / 63%) !important;
+} 
+
+.dropdown-item-active:hover {
+  background-color: rgba(224, 215, 239, 0.48) !important;
+} 
+
+.h-5rm {
+  height: 5rem !important;
+}
+
+.h-3rm {
+    height: 1rem !important;
+}
+
+.w-max-content {
+    width: max-content !important;
+}
+
+#nav-search::placeholder:text {
+  padding-left: 1rem !important;
+}
+
+#text-field-container > * { 
+  padding-left: 3rem !important;
+}
+
+#editing-view-port {
+  padding-left: 3rem !important;
+}
+
+.light-toggler {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='whitesmoke' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+    /* border-color: whitesmoke !important;
+    border-width: .5rem !important; */
+}
+/* ---- Fin navbar(revisar) ---- */
+
+/* ---- Fin Mis estilos ----- */

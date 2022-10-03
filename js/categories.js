@@ -163,6 +163,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
       showCategoriesList();
     });
   /* ------------- Muestra email del usuario guardado en localStorage ------------- */
-  loadUserEmail();
+  loadUserEmail("#idNavEmail");
   /* -------------------------- */
 });

@@ -1,7 +1,7 @@
-/* ---------- Limpia localStorage DEJAR o QUITAR? ---------- */
-/* localStorage.clear(); */
-/* window.localStorage.removeItem("userEmail"); */
+/* --- Elimina email de local storage --- */
+window.localStorage.removeItem("userEmail");
 /* --------------------------- */
+
 document.addEventListener("DOMContentLoaded", function () {
   /* --------------- Definicion de Variables  --------------- */
   const btnInSesion = document.querySelector("#idInSesion");
