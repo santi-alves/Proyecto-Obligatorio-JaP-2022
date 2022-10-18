@@ -1,6 +1,7 @@
 let objProductInfo = {};
 let arrProductComments = [];
 let objProductInfoRelatedExtra;
+
 let averageScore = 0;
 let totalScore = 0;
 let commentsAmount = 0;
@@ -24,6 +25,7 @@ const fetchInfo = async (url) => {
 
 /* --- fin fetch producto pre-cargado(REVISAR FUNCIONALIDAD) --- */
 
+
 /* --------- Funcion que almacena id del producto en almacenamiento local --------- */
 function setProductID(id) {
   localStorage.setItem("productID", id);
@@ -45,6 +47,7 @@ function showProductInfo() {
   let productsRel = "";
   /* -------- */
 
+
   const carouselIndicatorsContainer = document.querySelector(
     "#carousel-indicators-container"
   );
@@ -60,6 +63,7 @@ function showProductInfo() {
   const containerRelatedProducts = document.querySelector(
     "#container-related-products"
   );
+
 
   /* ------ Loop Carousel Imagenes ------ */
   for (let index = 0; index < objProductInfo.images.length; index++) {
@@ -84,6 +88,7 @@ function showProductInfo() {
   /* ----- Productos relacionados card Plantilla Categories ----- */
   for (let index = 0; index < objProductInfo.relatedProducts.length; index++) {
     productsRel += `<div id="related-product-card-${index}" data-product-id="${objProductInfo.relatedProducts[index].id}" onclick="setProductID(${objProductInfo.relatedProducts[index].id})" class="col-md-3">
+
             <div class="card mb-2 shadow-sm custom-card cursor-active min-height-100 rounded-borders py-0 border-0">
             <div class="card-header py-0 border-0"></div>
               <img class="bd-placeholder-img card-img-top" src="${objProductInfo.relatedProducts[index].image}"
@@ -104,12 +109,14 @@ function showProductInfo() {
              </div>
          <!-- -------- Fin Estrellas Calificacion Promedio -------- -->
         
+
                 <p class="card-text">${objProductInfoRelatedExtra.description}</p>
               </div>
             </div>
             </div>`;
     /* ----- Fin Productos relacionados card Plantilla Categories ----- */
   }
+
 
   containerProductDetails.setAttribute("id", objProductInfo.id);
   carouselIndicatorsContainer.innerHTML = productImagesCarouselIndicator;
@@ -138,6 +145,7 @@ function getProductComments() {
     /* --- fin calcular promedio calificacion (continuar) --- */
 
     productComments += `<div class="list-group-item border-0 border-start border-5 border-start-light-indigo mb-2">
+
       <div class="d-flex w-100 justify-content-between">
         <h5 class="mb-1">${arrProductComments[index].user}</h5>
         <small class="text-muted">${arrProductComments[index].dateTime}</small>
@@ -153,6 +161,7 @@ function getProductComments() {
            <!-- -------- Fin Estrellas Calificacion Comentarios de otros usuarios -------- -->
       <p class="mb-1">${arrProductComments[index].description}</p>
     </div>`;
+
   }
   /* --- calcular promedio calificacion (continuar) --- */
   averageScore = Math.round(totalScore / commentsAmount);
@@ -345,11 +354,14 @@ document.addEventListener("DOMContentLoaded", async function (e) {
                commentDateTime.getMinutes() +
                ":" +
                commentDateTime.getSeconds()
+
              }</small>
            </div>
            <!-- -------- Estrellas Select Commentarios -------- -->      
            <div data-user-score="${slctScore.value}" class="star-container">
+
            ${slctScore.value} - <span class="star-item-1 fa fa-star"></span>
+
                 <span class="star-item-2 fa fa-star"></span>
                 <span class="star-item-3 fa fa-star"></span>
                 <span class="star-item-4 fa fa-star"></span>
@@ -358,6 +370,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
                 <!-- -------- Fin Estrellas Select Commentarios -------- -->
            <p class="mb-1">${txtComment.value}</p>
          </div>`;
+
       /* --- fin Realizar Comentario Bs --- */
 
       slctScore.value = "";
@@ -394,12 +407,14 @@ document.addEventListener("DOMContentLoaded", async function (e) {
   /* ------------ */
 
   /* ------- Bootstrap Popovers Inicializador ------- */
+
   var popoverTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="popover"]')
   );
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl);
   });
+
   /* ------- Fin Bootstrap Popovers Inicializador ------- */
 
   const averageUsersScoreContainer = document.querySelector(
@@ -422,4 +437,5 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     "Average users score: " +
       averageUsersScoreContainer.getAttribute("data-average-user-score")
   );
+
 });

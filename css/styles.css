@@ -222,6 +222,11 @@ a:hover {
 
 .bg-indigo {
   background-color: var(--bs-indigo) !important;
+
+ color: orange; 
+ 
+}
+
 }
 
 .text-orange {
@@ -379,3 +384,4 @@ a:hover {
 /* ---- Fin navbar(revisar) ---- */
 
 /* ---- Fin Mis estilos ----- */
+
