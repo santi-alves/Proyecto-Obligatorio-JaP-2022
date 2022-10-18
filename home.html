@@ -12,7 +12,107 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+  <!-- sticky navbar (agregar contenido) -->
+  <div class="container-fluid h-5rm bg-indigo"></div>
+  <!-- sticky navbar (agregar contenido) -->
+  <nav class="navbar navbar-expand-md sticky-top navbar-light p-1 mb-3 gradient-indigo-semi-transparent">
+    <div class="container">
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon light-toggler"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <div class="nav-item d-inline-flex">
+            <li class="nav-item">
+              <a class="navbar-brand nav-link text-orange text-light" href="home.html"><strong>Inicio</strong></a>
+            </li>
+            <!-- ---- Dropdown Categorias ---- -->
+            <li class="nav-item dropdown mb-sm-2 me-sm-2 mb-lg-0 me-lg-0">
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbar-dropdown-categories" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="navbar-dropdown-categories">
+                <li class="">
+                  <a class="dropdown-item dropdown-header text-indigo dropdown-item-active"
+                    href="categories.html">Categorías</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                    onclick="setCatID(101)">Autos</a>
+                </li>
+                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                    onclick="setCatID(109)">Celulares</a></li>
+                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                    onclick="setCatID(105)">Computadoras</a></li>
+
+                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                    onclick="setCatID(108)">Deporte</a>
+                </li>
+
+                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                    onclick="setCatID(107)">Electrodomésticos</a></li>
+
+                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html "
+                    onclick="setCatID(104)">Herramientas</a></li>
+                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                    onclick="setCatID(102)">Juguetes</a>
+                </li>
+                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                    onclick="setCatID(103)">Muebles</a>
+                </li>
+                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                    onclick="setCatID(106)">Vestimenta</a></li>
+              </ul>
+            </li>
+            <!-- ---- Fin Dropdown Categorias ---- -->
+            <li class="nav-item">
+              <a class="nav-link text-light" href="sell.html">Vender</a>
+            </li>
+          </div>
+          <!-- -------- Barra de busqueda -------- -->
+          <li class="nav-item col-sm-12 col-md-5 col-lg-6 col-xl-7">
+            <form id="nav-form-search" class="d-flex input-group" action="">
+              <input class="form-control rounded-start-pill" type="search" name="" id="nav-inpt-search"
+                placeholder="Todo lo que busques está aquí...">
+              <button id="btn-search" class="btn btn-outline-light rounded-end-pill" type="submit">
+                Buscar
+              </button>
+            </form>
+          </li>
+          <!-- -------- fin Barra de busqueda -------- -->
+          <!-- ---- Dropdown menu usuario ---- -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbar-dropdown-user" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <!-- Email usuario -->
+            </a>
+            <ul class="dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="navbar-dropdown-user">
+              <li><a id="idNavEmail" class="dropdown-item text-indigo dropdown-item-active" href="my-profile.html">
+                  Mi perfil
+                  <!-- ---- perfil ---- -->
+                </a></li>
+              <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="cart.html">
+                  Mi carrito
+                  <!-- -------- carrito -------- -->
+                </a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a id="idLogout" class="dropdown-item text-indigo dropdown-item-active" href="index.html">Cerrar
+                  sesión</a></li>
+            </ul>
+          </li>
+          <!-- ---- Fin Dropdown menu usuario ---- -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar Original JaP -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,23 +129,26 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li id="idNavEmail" class="nav-item">
-            <!-- -------- Email del usuario ingresado en el login -------- -->
+          <li class="nav-item">
+            <a id="idNavEmail" class="nav-link" href="my-profile.html">
+              <!- ---- Email del usuario ingresado en el login ---- ->
+            </a>
           </li>
           <li id="idLogout" class="nav-item">
-            <a class="nav-link" href="index.html">Cerrar sesión.</a>
+            <a class="nav-link" href="index.html">Cerrar sesión</a>
           </li>
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
+  <!-- fin navbar Original JaP -->
   <main>
     <div class="jumbotron text-center"></div>
     <div class="album py-5 bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <div class="card mb-4 shadow-sm custom-card cursor-active" id="autos">
+            <div class="card mb-4 shadow-sm custom-card cursor-active border-0 rounded-borders" id="autos">
               <img class="bd-placeholder-img card-img-top" src="img/cars_index.jpg"
                 alt="Imagen representativa de la categoría 'Autos'">
               <h3 class="m-3">Autos</h3>
@@ -55,7 +158,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card mb-4 shadow-sm custom-card cursor-active" id="juguetes">
+            <div class="card mb-4 shadow-sm custom-card cursor-active border-0 rounded-borders" id="juguetes">
               <img class="bd-placeholder-img card-img-top" src="img/toys_index.jpg"
                 alt="Imagen representativa de la categoría 'Juguetes'">
               <h3 class="m-3">Juguetes</h3>
@@ -65,7 +168,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card mb-4 shadow-sm custom-card cursor-active" id="muebles">
+            <div class="card mb-4 shadow-sm custom-card cursor-active border-0 rounded-borders" id="muebles">
               <img class="bd-placeholder-img card-img-top" src="img/furniture_index.jpg"
                 alt="Imagen representativa de la categoría 'Muebles'">
               <h3 class="m-3">Muebles</h3>
@@ -81,7 +184,22 @@
       </div>
     </div>
   </main>
-  <footer class="text-muted">
+  <footer class="bg-dark text-white-50 pt-2 pb-3">
+    <div class="container">
+      <p class="float-end">
+        <a class="text-orange text-decoration-none" href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a class="text-orange text-decoration-none" href="https://jovenesaprogramar.edu.uy/"
+          target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a class="text-orange text-decoration-none" target="_blank" href="Letra.pdf">aquí</a> para
+        descargar la
+        letra del
+        obligatorio.</p>
+    </div>
+  </footer>
+  <!-- footer original JaP -->
+  <!-- <footer class="text-muted">
     <div class="container">
       <p class="float-end">
         <a href="#">Volver arriba</a>
@@ -90,7 +208,8 @@
         2022</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
-  </footer>
+  </footer> -->
+  <!-- fin footer original JaP -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/init.js"></script>

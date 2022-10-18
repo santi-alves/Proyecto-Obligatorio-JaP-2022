@@ -2,11 +2,19 @@ body {
   background-color: rgb(248, 249, 250);
 }
 
+*::selection {
+  background: var(--bs-orange);
+  color: var(--bs-light);
+}
+
 .jumbotron,
 .card-body,
 .container,
 .site-header {
-  font-family: 'Raleway', serif !important;
+  font-family: "Raleway", serif !important;
+  /* --- Fuentes propias --- */
+  /*  font-family: "Segoe UI", "-apple-system", "Comfortaa", "Roboto", "system-ui", "Helvetica Neue", "Arial", "Noto Sans", "Liberation Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important; */
+  /* --- fin Fuentes propias --- */
 }
 
 .jumbotron .display-4 {
@@ -36,8 +44,8 @@ nav a {
   height: 50vh;
   padding: 5em inherit;
   margin-bottom: 0;
-  background-color: #53C0FB;
-  background: url('../img/cover_back.png');
+  background-color: #53c0fb;
+  background: url("../img/e-mercado_cover_edit.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,12 +85,12 @@ footer {
 }
 
 footer p {
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .site-header a {
   color: white;
-  transition: ease-in-out color .15s;
+  transition: ease-in-out color 0.15s;
 }
 
 .site-header .dropdown-menu a {
@@ -90,7 +98,7 @@ footer p {
 }
 
 .dropzone {
-  border: 2px dashed #0087F7;
+  border: 2px dashed #0087f7;
   border-radius: 5px;
   background: white;
 }
@@ -190,26 +198,35 @@ a.custom-card:hover {
 }
 
 .checked {
+  color: orange;
+}
+
+/* ---- Mis estilos ----- */
+.unchecked {
+  color: lightgray;
+}
+
+*:focus {
+  box-shadow: none !important;
+}
+
+/* #chckbox:checked */ .inpt-checked-indigo:checked {
+  background-color: var(--bs-indigo) !important;
+  border-color: var(--bs-indigo) !important;
+  box-shadow: none !important ;
+}
+
+a:hover {
+  color: var(--bs-yellow) !important;
+}
+
+.bg-indigo {
+  background-color: var(--bs-indigo) !important;
+
  color: orange; 
  
 }
 
-
-/* ---- Mis estilos ----- */
-
-.unchecked {
-  color: darkgray;
-  /* color: var(--redbrown); */
-}
-
-#chckbox:checked {
-  background-color: black;
-  border-color: black !important;
-  box-shadow: none !important ; 
-}
-
-.bg-indigo {
-  background: var(--bs-indigo) !important; 
 }
 
 .text-orange {
@@ -221,61 +238,150 @@ a.custom-card:hover {
 }
 
 .bg-orange {
-  background: var(--bs-orange) !important; 
+  background: var(--bs-orange) !important;
 }
 
-/* [data-bs-toggle="tooltip"] {
-  background-color: var(--bs-tooltip-bg);
-  var(--bs-tooltip-bg): var(--bs-red); 
-   color: var(--bs-tooltip-bg: --bs-red);
-  background-color: var(--bs-tooltip-bg: --bs-blue); 
-}*/
-
-/* ---- Bootstrap custom colors tests ---- */
-/* #btn-comment {
-  background: var(--bs-orange);
-} */
-/* ---- Fin Bootstrap custom colors tests ---- */
-
-/* #comments-container {
-  background: red;
-} */
-
-/* [data-user-score]:last-of-type {
-  background: red;
-} */
-
-/* ------ ELIMINAR TESTS IMGS ------ */
-
-/* #carousel-images-container:not(:first-child)  {
-  padding: 5rem;
-  background: red;
-} */
-
-/* .ok {
-  color: var(--redOrange : red;) ;
-
+.border-start-orange {
+  border-color: var(--bs-orange) !important;
 }
 
-#comments-container {
-  background-image: url(https://dummyimage.com/750/);
-  background-repeat: repeat-x;
-  backdrop-filter: multiply;
-  opacity: 0.7;
-  z-index:-1;
+.border-start-indigo {
+  border-color: var(--bs-indigo) !important;
+}
+
+.border-start-light-indigo {
+  border-color: rgba(224, 215, 239, 0.48) !important;
+}
+
+.btn-outline-orange {
+  border-color: var(--bs-orange) !important;
+  color: var(--bs-orange) !important;
+}
+
+.btn-outline-orange-hover:hover {
+  background: var(--bs-orange) !important;
+  color: var(--bs-light) !important;
+}
+
+.btn-indigo-hover:hover {
+  color: var(--bs-orange) !important;
+}
+
+.btn-outline-indigo-hover:hover {
+  font-weight: bold;
+  color: var(--bs-indigo)
+} /* --- APLICAR A BTN --- */
+
+.box-shadow-focus-none:focus {
+  box-shadow: none !important;
+}
+
+.rounded-start-pill {
+  border-radius: 50rem 0 0 50rem !important;
+}
+
+.rounded-end-pill {
+  border-radius: 0 50rem 50rem 0 !important;
+}
+
+/* --- custom-card-02 --- */
+.rounded-borders {
+  border-radius: 0.5rem !important;
+  /* background-clip: border-box; */
+  /* clip: auto; */
+  /* overflow-clip-margin: border-box; */
+  overflow-x: clip;
+  overflow-y: clip;
+}
+/* --- fin custom-card-02 --- */
+
+.rounded-borders-start {
+  border-radius: 0.5rem 0 0 .5rem !important;
+  overflow-x: clip;
+  overflow-y: clip;
+}
+
+.rounded-borders-end {
+  border-radius: 0 0.5rem 0.5rem 0 !important;
+  overflow-x: clip;
+  overflow-y: clip;
+}
+
+.min-height-100 {
+  min-height: 100% !important;
+}
+
+/* ---- navbar(revisar) ---- */
+.z-index-auto {
+  /*  position: sticky !important; */
+  z-index: auto !important;
+  top: 4rem !important;
+}
+
+.gradient-indigo-semi-transparent {
+  /* filter: opacity(0.9) !important; */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(102, 16, 242, 1),
+    rgba(102, 16, 242, 0.9)
+  ) !important;
+  backdrop-filter: blur(0.25rem) !important;
+}
+
+.dropdown-item-active:active {
+  background-color: rgba(211 186 255 / 63%) !important;
+}
+
+.dropdown-item-active:hover {
+  background-color: rgba(224, 215, 239, 0.48) !important;
+}
+
+.h-5rm {
+  height: 5rem !important;
+}
+
+.h-3rm {
+  height: 1rem !important;
+}
+
+.w-max-content {
+  width: max-content !important;
+}
+
+/* --- estilos placeholder (no funcionan)--- */
+/* #nav-inpt-search > [pseudo=-webkit-input-placeholder] {
+  padding-left: 1rem !important;
+  margin-left: 1rem !important;
+ color: red !important;
 } */
 
-/* :root {
-  --bs-tooltip-bg: --bs-red;
-  --bs-tooltip-bg: --bs-blue;
-  
-
-
-   --redbrown: rgb(110, 34, 34); 
+/* #nav-inpt-search > #placeholder {
+  padding-left: 1rem !important;
+  margin-left: 1rem !important;
+  color: red !important;
 } */
 
+/* #nav-inpt-search::placeholder:text {
+  padding-left: 1rem !important;
+  margin-left: 1rem !important;
+} */
+/* --- estilos placeholder (no funcionan)--- */
 
+#text-field-container > * {
+  padding-left: 3rem !important;
+}
 
-/* ------ ELIMINAR TESTS IMGS ------ */
+#editing-view-port {
+  padding-left: 3rem !important;
+}
+
+.light-toggler {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='whitesmoke' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+  /* border-color: whitesmoke !important;
+    border-width: .5rem !important; */
+}
+
+/* ---- Fin navbar(revisar) ---- */
 
 /* ---- Fin Mis estilos ----- */
+

@@ -71,7 +71,8 @@ function showProductsList() {
         (maxPrice != undefined && parseInt(product.cost) <= maxPrice))
     ) {
       // Agregue id containerProd-i
-      htmlContentToAppend += `<div id="containerProd-${i}" onclick="setProductID(${product.id})" class="list-group-item list-group-item-action cursor-active">
+      htmlContentToAppend +=
+        /* `<div id="containerProd-${i}" onclick="setProductID(${product.id})" class="list-group-item list-group-item-action cursor-active">
       <div class="row">
           <div class="col-3">
               <img src="${product.image}" alt="${product.description}" class="img-thumbnail">
@@ -85,7 +86,24 @@ function showProductsList() {
               <p class="mb-1">${product.description}</p>
           </div>
       </div>
-  </div>`;
+  </div>`; */
+
+        /* --- categories rediseño --- */
+        `<div id="containerProd-${i}" onclick="setProductID(${product.id})" class="list-group-item list-group-item-action cursor-active p-0 border-0 mb-3 rounded-borders shadow-sm">
+          <div class="row">
+              <div class="col-3">
+                  <img src="${product.image}" alt="${product.description}" class="img-thumbnail p-0 border-0 rounded-borders">
+              </div>
+              <div class="col">
+                  <div class="d-flex w-100 justify-content-between pt-3">
+                      <h4 id="title-${i}" class="mb-1">${product.name} - ${product.currency} ${product.cost}</h4>
+                      <small class="text-muted pe-3">${product.soldCount} vendidos</small>
+                  </div>
+                  <p class="mb-1">${product.description}</p>
+              </div>
+          </div>
+      </div>`;
+      /* --- fin categories rediseño --- */
     }
   }
   document.getElementById("main-container").innerHTML = htmlContentToAppend;
@@ -112,7 +130,7 @@ function sortAndShowProducts(sortCriteria, productsArray) {
 document.addEventListener("DOMContentLoaded", function (e) {
   const categoryTitle = document.querySelector("#categoryTitle");
   /* const mainContainer = document.querySelector("#main-container"); */
-  const navSearch = document.querySelector("#nav-search");
+  const navSearch = document.querySelector("#nav-inpt-search");
 
   /* ----------- Llamado a la funcion que genera el contenido a partir de la respuesta que devuelve fetch a la URL general de productos mas el id de la categoria almacenado en localStorage y la extension .json----------- */
   getJSONData(PRODUCTS_URL + localStorage.getItem("catID") + EXT_TYPE).then(
@@ -203,6 +221,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
   /* ---------- Fin Llamado a funciones Plantilla Categories ------------ */
 
   /* ------------- Muestra email del usuario guardado en localStorage ------------- */
-  loadUserEmail();
+  loadUserEmail("#navbar-dropdown-user");
   /* ------------ */
 });

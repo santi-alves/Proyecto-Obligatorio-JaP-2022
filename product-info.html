@@ -2,188 +2,296 @@
 <html lang="es">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>eMercado - Todo lo que busques está aquí</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>eMercado - Todo lo que busques está aquí</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
 
-  <!-- -------- Fontawesome stars --------- -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-  <!-- --------- -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- -------- Fontawesome stars --------- -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- --------- -->
+    <!-- -------- Google Material Icons --------- -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- ------------- -->
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-indigo p-1 mb-3">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <div class="nav-item d-inline-flex">
-            <li class="nav-item">
-              <a class="navbar-brand nav-link text-orange text-light" href="home.html"><strong>Inicio</strong></a>
-            </li>
-            <!-- ---- Dropdown Categorias ---- -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Categorías
-              </a>
-              <ul class=" dropdown-menu dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
-                <li class="">
-                  <a class="dropdown-item dropdown-header text-indigo" href="categories.html">Categorías</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a id="" class="dropdown-item text-indigo" href="products.html" onclick="setCatID(101)">Autos</a>
-                </li>
-                <li><a id="" class="dropdown-item text-indigo" href="products.html"
-                    onclick="setCatID(109)">Celulares</a></li>
-                <li><a id="" class="dropdown-item text-indigo" href="products.html"
-                    onclick="setCatID(105)">Computadoras</a></li>
+    <!-- sticky navbar (agregar contenido) -->
+    <div class="container-fluid h-5rm bg-indigo"></div>
+    <!-- sticky navbar (agregar contenido) -->
+    <nav class="navbar navbar-expand-md sticky-top navbar-light p-1 mb-3 gradient-indigo-semi-transparent">
+        <div class="container">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon light-toggler"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100 justify-content-between">
+                    <div class="nav-item d-inline-flex">
+                        <li class="nav-item">
+                            <a class="navbar-brand nav-link text-orange text-light"
+                                href="home.html"><strong>Inicio</strong></a>
+                        </li>
+                        <!-- ---- Dropdown Categorias ---- -->
+                        <li class="nav-item dropdown mb-sm-2 me-sm-2 mb-lg-0 me-lg-0">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbar-dropdown-categories"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorías
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="navbar-dropdown-categories">
+                                <li class="">
+                                    <a class="dropdown-item dropdown-header text-indigo dropdown-item-active"
+                                        href="categories.html">Categorías</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(101)">Autos</a>
+                                </li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(109)">Celulares</a></li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(105)">Computadoras</a></li>
 
-                <li><a id="" class="dropdown-item text-indigo" href="products.html" onclick="setCatID(108)">Deporte</a>
-                </li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(108)">Deporte</a>
+                                </li>
 
-                <li><a id="" class="dropdown-item text-indigo" href="products.html"
-                    onclick="setCatID(107)">Electrodomésticos</a></li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(107)">Electrodomésticos</a></li>
 
-                <li><a id="" class="dropdown-item text-indigo" href="products.html "
-                    onclick="setCatID(104)">Herramientas</a></li>
-                <li><a id="" class="dropdown-item text-indigo" href="products.html" onclick="setCatID(102)">Juguetes</a>
-                </li>
-                <li><a id="" class="dropdown-item text-indigo" href="products.html" onclick="setCatID(103)">Muebles</a>
-                </li>
-                <li><a id="" class="dropdown-item text-indigo" href="products.html"
-                    onclick="setCatID(106)">Vestimenta</a></li>
-              </ul>
-            </li>
-            <!-- ---- Fin Dropdown Categorias ---- -->
-
-            <li class="nav-item">
-              <a class="nav-link text-light" href="sell.html">Vender</a>
-            </li>
-          </div>
-
-          <!-- ---- Dropdown menu usuario ---- -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Mi perfil
-            </a>
-            <ul class="dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li><a id="idNavEmail" class="dropdown-item text-indigo" href="my-profile.html">
-
-                  <!-- ---- Email del usuario ingresado en el login ---- -->
-
-                </a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a id="idLogout" class="dropdown-item text-indigo" href="index.html">Cerrar sesión</a></li>
-            </ul>
-          </li>
-          <!-- ---- Fin Dropdown menu usuario ---- -->
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-  <main>
-    <div class="container">
-      <!-- ---- Breadcrumbs bootstrap ---- -->
-      <nav class=""
-        style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
-        aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a class="text-orange" href="home.html">Inicio</a></li>
-          <li class="breadcrumb-item"><a class="text-orange" href="categories.html">Categorias</a></li>
-          <li class="breadcrumb-item" aria-current="page"><a id="category-breadcrumbs" class="text-orange"
-              href="products.html"></a></li>
-          <li id="product-name-breadcrumbs" class="breadcrumb-item active fw-bold" aria-current="page"></li>
-        </ol>
-      </nav>
-      <!-- ---- Fin Breadcrumbs bootstrap ---- -->
-
-      <div class="row">
-        <div id="main-container" class="">
-
-          <!-- ----- Contenido del Producto a mostrar segun el id del mismo ------ -->
-
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active"
+                                        href="products.html " onclick="setCatID(104)">Herramientas</a></li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(102)">Juguetes</a>
+                                </li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(103)">Muebles</a>
+                                </li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(106)">Vestimenta</a></li>
+                            </ul>
+                        </li>
+                        <!-- ---- Fin Dropdown Categorias ---- -->
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="sell.html">Vender</a>
+                        </li>
+                    </div>
+                    <!-- -------- Barra de busqueda -------- -->
+                    <li class="nav-item col-sm-12 col-md-5 col-lg-6 col-xl-7">
+                        <form id="nav-form-search" class="d-flex input-group" action="">
+                            <input class="form-control rounded-start-pill" type="search" name="" id="nav-inpt-search"
+                                placeholder="Todo lo que busques está aquí...">
+                            <button id="btn-search"
+                                class="btn btn-outline-light btn-outline-indigo-hover rounded-end-pill " type="submit">
+                                Buscar
+                            </button>
+                        </form>
+                    </li>
+                    <!-- -------- fin Barra de busqueda -------- -->
+                    <!-- ---- Dropdown menu usuario ---- -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" id="navbar-dropdown-user" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <!-- Email usuario -->
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu dropdown-menu-end"
+                            aria-labelledby="navbar-dropdown-user">
+                            <li><a id="idNavEmail" class="dropdown-item text-indigo dropdown-item-active"
+                                    href="my-profile.html">
+                                    Mi perfil
+                                    <!-- ---- perfil ---- -->
+                                </a></li>
+                            <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="cart.html">
+                                    Mi carrito
+                                    <!-- -------- carrito -------- -->
+                                </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a id="idLogout" class="dropdown-item text-indigo dropdown-item-active"
+                                    href="index.html">Cerrar
+                                    sesión</a></li>
+                        </ul>
+                    </li>
+                    <!-- ---- Fin Dropdown menu usuario ---- -->
+                </ul>
+            </div>
         </div>
-      </div>
-      <!-- ------ Realizar Comentario -------  -->
-      <div class="container my-2" id="comment-product">
-        <div class="row">
-          <form id="frm-comment" class="form-floating" action="">
-            <fieldset class="">
-              <legend class="">
-                <h4>Comentar</h4>
-              </legend>
-              <span class="d-block mb-2">Tu opinión:</span>
-              <textarea class="form-control" name="" id="txt-comment" cols="" rows="" required></textarea>
-              <span class="d-block mb-2">Tu puntuación:</span>
-              <select class="form-select w-25" name="" id="slct-score" required>
-                <!-- <optgroup class=""> -->
-                <option value="" selected disabled>Califica este producto</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <!-- </optgroup> -->
-              </select>
-              <button id="btn-comment" class="btn my-2 bg-indigo text-orange rounded-pill"
-                type="button"><strong>Enviar</strong></button>
-            </fieldset>
-          </form>
+    </nav>
+    <main class="mb-3">
+        <div class="container">
+            <!-- ---- Breadcrumbs bootstrap ---- -->
+            <nav class="mb-3"
+                style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-orange" href="home.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a class="text-orange" href="categories.html">Categorias</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a id="category-breadcrumbs" class="text-orange"
+                            href="products.html"></a></li>
+                    <li id="product-name-breadcrumbs" class="breadcrumb-item active fw-bold" aria-current="page"></li>
+                </ol>
+            </nav>
+            <!-- ---- Fin Breadcrumbs bootstrap ---- -->
+            <div id="main-container" class="">
+                <!-- ----- Contenido Detalles Producto ------ -->
+                <div id="" data-id="container-product-details" class="row pb-3">
+                    <!-- ----------- Product Info ---------- -->
+                    <!-- ----------- Bootstrap Carousel ------------ -->
+                    <div id="carousel-product-images-container" class="col-sm-12 col-md-8 carousel slide mb-3"
+                        data-bs-ride="carousel" data-wrap="true">
+                        <div id="carousel-indicators-container" class="carousel-indicators">
+                            <!-- carousel indicators -->
+                        </div>
+                        <div id="carousel-images-container" class="carousel-inner">
+                            <!-- carousel imgs -->
+                        </div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#carousel-product-images-container" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#carousel-product-images-container" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                    <!-- ----------- Fin Bootstrap Carousel ------------ -->
+                    <!-- ---- Bootstrap Card Product Info ---- -->
+                    <div class="col">
+                        <div class="card mb-3 border-0 rounded-borders shadow-sm z-index-auto sticky-top">
+                            <div class="card-body">
+                                <!-- titulo product info -->
+                                <h1 id="product-details-title" class="card-title display-6"></h1>
+                                <!-- -------- Estrellas Calificacion Promedio (Falta implementar funcionalidad, Agregar a funcion) -------- -->
+                                <div tabindex="0" data-average-user-score="" class="average-stars-container d-inline"
+                                    data-bs-trigger="hover" data-bs-placement="auto" data-bs-toggle="popover"
+                                    data-bs-trigger="focus" title=""
+                                    data-bs-content="Calificación promedio del producto según otros usuarios">
+                                    <span class="star-item-1 fa fa-star"></span>
+                                    <span class="star-item-2 fa fa-star"></span>
+                                    <span class="star-item-3 fa fa-star"></span>
+                                    <span class="star-item-4 fa fa-star"></span>
+                                    <span class="star-item-5 fa fa-star"></span>
+                                </div>
+                                <!-- -------- Fin Estrellas Calificacion Promedio -------- -->
+                                <!-- --- cantidad vendida --- -->
+                                <small id="product-sold-count" class="text-muted d-block"></small>
+                                <!-- --- descripcion producto --- -->
+                                <p id="product-description" class="card-text"></p>
+                                <form class="form-floating mb-2" action="" method="">
+                                    <input id="amount-product" class="form-control rounded-borders" type="number"
+                                        name="" min="1" value="1" placeholder="Cantidad">
+                                    <label class="form-label" for="amount-product">Cantidad</label>
+                                </form>
+                                <div class="d-grid gap-2">
+                                    <button id="btn-buy-product"
+                                        class="btn bg-indigo text-light rounded-pill btn-indigo-hover"
+                                        type="button"><strong>Comprar
+                                            ahora</strong></button>
+                                    <button id="btn-add-to-cart"
+                                        class="btn btn-outline-orange btn-outline-orange-hover rounded-pill box-shadow-focus-none"
+                                        type="button">Añadir
+                                        al
+                                        carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ---- Fin Bootstrap Card Product Info ---- -->
+                    <!-- ----------- Fin Product Info ---------- -->
+                </div>
+                <!-- ----- Fin Contenido Detalles Producto ------ -->
+                <!-- ----- Contenido Productos relacionados ------ -->
+                <!-- --- productos relacionados --- -->
+                <div id="container-related-products" class="row row-cols-2 justify-content-center album pb-3 mb-2">
+                    <!-- ----- Productos relacionados card plantilla categories ----- -->
+                    <h3 class="w-100">Productos relacionados</h3>
+                    <!-- productos relacionados -->
+                    <!-- ----- Fin Productos relacionados card plantilla categories ----- -->
+                </div>
+                <!-- ----- Fin Contenido Productos relacionados ------ -->
+                <!-- ----- Contenido del Producto a mostrar segun el id del mismo ------ -->
+                <!-- ------ Realizar Comentario -------  -->
+                <!-- Agregar estilos de texto(italic, bold, etc) -->
+                <div class="container mb-2" id="comment-product">
+                    <div class="row">
+                        <form id="frm-comment" class="form-floating" action="">
+                            <h4>Comentar</h4>
+                            <span class="d-block mb-2">Tu opinión:</span>
+                            <textarea class="form-control mb-2 h-25 rounded-borders" name="" id="txt-comment" cols=""
+                                rows="3" placeholder="Preguntas sobre el producto..." spellcheck="true"
+                                required></textarea>
+                            <span class="d-block mb-2">Tu puntuación:</span>
+                            <select class="form-select w-25 mb-2 py-0 text-indigo rounded-borders" name=""
+                                id="slct-score" required>
+                                <!-- <optgroup class=""> -->
+                                <option class="text-indigo dropdown-item-active" value="" selected disabled>Califica
+                                    este producto
+                                </option>
+                                <option class="text-indigo dropdown-item-active" value="1">1</option>
+                                <option class="text-indigo dropdown-item-active" value="2">2</option>
+                                <option class="text-indigo dropdown-item-active" value="3">3</option>
+                                <option class="text-indigo dropdown-item-active" value="4">4</option>
+                                <option class="text-indigo dropdown-item-active" value="5">5</option>
+                                <!-- </optgroup> -->
+                            </select>
+                            <button id="btn-comment" class="btn mb-2 bg-indigo text-light btn-indigo-hover rounded-pill"
+                                type="button">
+                                <strong>Enviar</strong>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- ------ Fin Realizar Comentario -------  -->
+                <hr class="mt-0">
+                <!-- ---------- Comentarios de otros usuarios ---------- -->
+                <div id="comments-container" class="row list-group">
+                    <h4 class="mt-0">Comentarios</h4>
+                    <!-- ----- List group Comentarios Bootsrap ----- -->
+                </div>
+                <!-- ------ FIN Comentarios de otros usuarios -------  -->
+            </div>
         </div>
-      </div>
-      <!-- ------ Fin Realizar Comentario -------  -->
-      <hr>
-      <!-- ---------- Comentarios de otros usuarios ---------- -->
-      <div id="comments-container" class="row list-group list-group-flush">
-        <h4 class="">Comentarios</h4>
-
-        <!-- ----- List group Comentarios Bootsrap ----- -->
-
-      </div>
-      <!-- ------ FIN Comentarios de otros usuarios -------  -->
+    </main>
+    <footer class="bg-dark text-white-50 pt-2 pb-3">
+        <div class="container">
+            <p class="float-end">
+                <a class="text-orange text-decoration-none" href="#">Volver arriba</a>
+            </p>
+            <p>Este sitio forma parte de <a class="text-orange text-decoration-none"
+                    href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+                2022</p>
+            <p>Clickea <a class="text-orange text-decoration-none" target="_blank" href="Letra.pdf">aquí</a> para
+                descargar la
+                letra del
+                obligatorio.</p>
+        </div>
+    </footer>
+    <div id="spinner-wrapper">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-  </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
-        2022</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/product-info.js"></script>
-  <!-- -------- Alerta original -------- -->
-  <!-- <div class="alert alert-danger text-center" role="alert">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/product-info.js"></script>
+    <!-- -------- Alerta original -------- -->
+    <!-- <div class="alert alert-danger text-center" role="alert">
         <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
       </div> -->
-  <!-- -------- Fin Alerta original -------- -->
+    <!-- -------- Fin Alerta original -------- -->
+
 </body>
 
 </html>

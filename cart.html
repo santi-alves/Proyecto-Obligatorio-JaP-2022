@@ -2,47 +2,296 @@
 <html lang="es">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>eMercado - Todo lo que busques está aquí</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>eMercado - Todo lo que busques está aquí</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <li class="nav-item">
-          </li>
-        </ul>
+    <!-- sticky navbar (agregar contenido) -->
+    <div class="container-fluid h-5rm bg-indigo"></div>
+    <!-- sticky navbar (agregar contenido) -->
+    <nav class="navbar navbar-expand-md sticky-top navbar-light p-1 mb-3 gradient-indigo-semi-transparent">
+        <div class="container">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon light-toggler"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100 justify-content-between">
+                    <div class="nav-item d-inline-flex">
+                        <li class="nav-item">
+                            <a class="navbar-brand nav-link text-orange text-light"
+                                href="home.html"><strong>Inicio</strong></a>
+                        </li>
+                        <!-- ---- Dropdown Categorias ---- -->
+                        <li class="nav-item dropdown mb-sm-2 me-sm-2 mb-lg-0 me-lg-0">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbar-dropdown-categories"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorías
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="navbar-dropdown-categories">
+                                <li class="">
+                                    <a class="dropdown-item dropdown-header text-indigo dropdown-item-active"
+                                        href="categories.html">Categorías</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(101)">Autos</a>
+                                </li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(109)">Celulares</a></li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(105)">Computadoras</a></li>
+
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(108)">Deporte</a>
+                                </li>
+
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(107)">Electrodomésticos</a></li>
+
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active"
+                                        href="products.html " onclick="setCatID(104)">Herramientas</a></li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(102)">Juguetes</a>
+                                </li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(103)">Muebles</a>
+                                </li>
+                                <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="products.html"
+                                        onclick="setCatID(106)">Vestimenta</a></li>
+                            </ul>
+                        </li>
+                        <!-- ---- Fin Dropdown Categorias ---- -->
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="sell.html">Vender</a>
+                        </li>
+                    </div>
+                    <!-- -------- Barra de busqueda -------- -->
+                    <li class="nav-item col-sm-12 col-md-5 col-lg-6 col-xl-7">
+                        <form id="nav-form-search" class="d-flex input-group" action="">
+                            <input class="form-control rounded-start-pill" type="search" name="" id="nav-inpt-search"
+                                placeholder="Todo lo que busques está aquí...">
+                            <button id="btn-search" class="btn btn-outline-light rounded-end-pill" type="submit">
+                                Buscar
+                            </button>
+                        </form>
+                    </li>
+                    <!-- -------- fin Barra de busqueda -------- -->
+                    <!-- ---- Dropdown menu usuario ---- -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" id="navbar-dropdown-user" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <!-- Email usuario -->
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu dropdown-menu-end"
+                            aria-labelledby="navbar-dropdown-user">
+                            <li><a id="idNavEmail" class="dropdown-item text-indigo dropdown-item-active"
+                                    href="my-profile.html">
+                                    Mi perfil
+                                    <!-- ---- perfil ---- -->
+                                </a></li>
+                            <li><a id="" class="dropdown-item text-indigo dropdown-item-active" href="cart.html">
+                                    Mi carrito
+                                    <!-- -------- carrito -------- -->
+                                </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a id="idLogout" class="dropdown-item text-indigo dropdown-item-active"
+                                    href="index.html">Cerrar
+                                    sesión</a></li>
+                        </ul>
+                    </li>
+                    <!-- ---- Fin Dropdown menu usuario ---- -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar orig jap + header -->
+    <!-- <header class="bg-danger">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 justify-content-between">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">Categorías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sell.html">Vender</a>
+            </li>
+            <li class="nav-item">
+              <a id="idNavEmail" class="nav-link" href="my-profile.html">
+                <!- ---- Email del usuario ingresado en el login ---- ->
+              </a>
+            </li>
+            <li id="idLogout" class="nav-item">
+              <a class="nav-link" href="index.html">Cerrar sesión</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
-  </main>
-  <footer class="text-muted">
+    </nav>
+  </header> -->
+    <!-- navbar orig jap + header -->
+    <main>
+        <div class="container">
+            <!-- ---- Breadcrumbs bootstrap ---- -->
+            <nav class="mb-3"
+                style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-orange" href="home.html">Inicio</a></li>
+                    <li id="cart-breadcrumbs" class="breadcrumb-item active fw-bold " aria-current="page">Carrito</li>
+                </ol>
+            </nav>
+            <!-- ---- Fin Breadcrumbs bootstrap ---- -->
+
+            <h3 class="text-center mb-3">Carrito de compras</h3>
+            <!-- <h4>Artículos a comprar</h4> -->
+
+            <div class="row">
+                <div id="container-products" class="list-group col-lg-8">
+
+                    <!-- ----- listado productos carrito ------ -->
+
+                </div>
+
+                <!-- ---- Bootstrap Card Product Info ---- -->
+                <div class="col-lg-4">
+                    <div class="card mb-3 border-0 rounded-borders shadow-sm z-index-auto sticky-top">
+                        <div class="card-body">
+                            <!-- titulo product info -->
+                            <h3 id="product-details-title" class="card-title">Subtotal a pagar</h3>
+                            <h5 class="h-3rm mb-3 fw-bold" id="subtotal-cost" class="card-text">
+                                <!-- subtotal -->
+                            </h5>
+                            <!-- --- tipo de envio ---  -->
+                            <h4>Tipo de envío</h4>
+                            <form class="form-floating" action="" method="" aria-required="true">
+
+                                <div class="mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input inpt-checked-indigo" type="radio"
+                                            name="type-delivery" id="premium-delivery" required>
+                                        <label class="form-check-label" for="premium-delivery">
+                                            Premium 2 a 5 días (15%)
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input inpt-checked-indigo" type="radio"
+                                            name="type-delivery" id="express-delivery" required>
+                                        <label class="form-check-label" for="express-delivery">
+                                            Express 5 a 8 días (7%)
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input inpt-checked-indigo" type="radio"
+                                            name="type-delivery" id="standard-delivery" required>
+                                        <label class="form-check-label" for="standard-delivery">
+                                            Standard 12 a 15 días (5%)
+                                        </label>
+                                    </div>
+                                </div>
+                                <h4>Dirección de envío</h4>
+                                <div class="form-floating col-auto mb-2">
+                                    <input type="text" class="form-control rounded-borders" id="street-address"
+                                        aria-describedby="street-help" placeholder="Calle" required>
+                                    <label for="street-address" class="form-label">Calle</label>
+                                </div>
+
+                                <div class="form-floating mb-2">
+                                    <input type="text" class="form-control rounded-borders" id="number-address"
+                                        aria-describedby="number-help" placeholder="Número" required>
+                                    <label for="number-address" class="form-label">Número</label>
+                                </div>
+
+                                <div class="form-floating mb-2">
+                                    <input type="text" class="form-control rounded-borders" id="corner-address"
+                                        aria-describedby="corner-help" placeholder="Esquina" required>
+                                    <label for="corner-address" class="form-label">Esquina</label>
+                                </div>
+
+                                <h4>Medio de pago</h4>
+                                <div class="mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input inpt-checked-indigo" type="radio"
+                                            name="payment-method" id="payment-method-visa" required>
+                                        <label class="form-check-label" for="payment-method-visa">
+                                            Visa
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input inpt-checked-indigo" type="radio"
+                                            name="payment-method" id="payment-method-mastercard" required>
+                                        <label class="form-check-label" for="payment-method-mastercard">
+                                            Mastercard
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input inpt-checked-indigo" type="radio"
+                                            name="payment-method" id="payment-method-dinners" required>
+                                        <label class="form-check-label" for="payment-method-dinners">
+                                            Dinners Club
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input inpt-checked-indigo" type="radio"
+                                            name="payment-method" id="payment-method-paypal" required>
+                                        <label class="form-check-label" for="payment-method-paypal">
+                                            Paypal
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <button id="btn-buy"
+                                    class="btn bg-indigo text-light rounded-pill btn-indigo-hover w-100" type="submit">
+                                    <strong>Finalizar Compra</strong>
+                                </button>
+                            </form>
+                            <!-- --- fin tipo de envio ---  -->
+                        </div>
+                    </div>
+                </div>
+                <!-- ---- Fin Bootstrap Card Product Info ---- -->
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white-50 pt-2 pb-3">
+        <div class="container">
+            <p class="float-end">
+                <a class="text-orange text-decoration-none" href="#">Volver arriba</a>
+            </p>
+            <p>Este sitio forma parte de <a class="text-orange text-decoration-none"
+                    href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+                2022</p>
+            <p>Clickea <a class="text-orange text-decoration-none" target="_blank" href="Letra.pdf">aquí</a> para
+                descargar la
+                letra del
+                obligatorio.</p>
+        </div>
+    </footer>
+    <!-- footer orig jap -->
+    <!-- <footer class="text-muted">
     <div class="container">
       <p class="float-end">
         <a href="#">Volver arriba</a>
@@ -51,18 +300,24 @@
         2022</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
-  </footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+  </footer> -->
+    <!-- footer orig jap -->
+    <div id="spinner-wrapper">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-  </div>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
+    <!-- Alerta original -->
+    <!-- <div class="alert alert-danger text-center" role="alert">
+        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      </div> -->
+    <!-- --- -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>

@@ -64,7 +64,9 @@ function showCategoriesList() {
       (maxCount == undefined ||
         (maxCount != undefined && parseInt(category.productCount) <= maxCount))
     ) {
-      htmlContentToAppend += `
+      htmlContentToAppend +=
+        /* --- categories ORIGINAL --- */
+        /* `
             <div onclick="setCatID(${category.id})" class="list-group-item list-group-item-action cursor-active">
                 <div class="row">
                     <div class="col-3">
@@ -79,7 +81,25 @@ function showCategoriesList() {
                     </div>
                 </div>
             </div>
-            `;
+            `; */
+        /* --- fin categories ORIGINAL --- */
+
+        /* --- categories rediseño --- */
+        `<div onclick="setCatID(${category.id})" class="list-group-item list-group-item-action cursor-active p-0 border-0 mb-3 rounded-borders shadow-sm">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="${category.imgSrc}" alt="${category.description}" class="img-thumbnail p-0 border-0 rounded-borders">
+                    </div>
+                    <div class="col">
+                        <div class="d-flex w-100 justify-content-between pt-3">
+                            <h4 class="mb-1">${category.name}</h4>
+                            <small class="text-muted pe-3">${category.productCount} artículos</small>
+                        </div>
+                        <p class="mb-1">${category.description}</p>
+                    </div>
+                </div>
+            </div>`;
+      /* --- fin categories rediseño --- */
     }
 
     document.getElementById("cat-list-container").innerHTML =
@@ -163,6 +183,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
       showCategoriesList();
     });
   /* ------------- Muestra email del usuario guardado en localStorage ------------- */
-  loadUserEmail();
+  loadUserEmail("#navbar-dropdown-user");
   /* -------------------------- */
 });

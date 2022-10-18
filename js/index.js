@@ -13,6 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* ------------- Muestra email del usuario guardado en localStorage ------------- */
-  loadUserEmail();
+  loadUserEmail("#navbar-dropdown-user");
   /* -------------------------- */
 });

@@ -1,0 +1,1 @@
+loadUserEmail("#navbar-dropdown-user");

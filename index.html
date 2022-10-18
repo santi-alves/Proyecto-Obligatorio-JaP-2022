@@ -18,11 +18,11 @@
 
 <body>
     <!-- ----- Login original ----- -->
-    <!-- ----------------- Contenedor general ----------------- -->
-    <div class="container-fluid align-items-center justify-content-center">
+    <!-- ----------------- Contenedor general ??? ----------------- -->
+    <div class="container-fluid">
         <!-- ---------------------------------- -->
         <!-- ----------------- Header ----------------- -->
-        <header class="row bg-dark text-light">
+        <header class="row bg-indigo text-orange">
             <div class="container text-center pt-3 pb-2">
                 <h1>Bienvenido de vuelta... e-mercado te espera.</h1>
                 <!--  <h1>Inicio de sesión</h1> -->
@@ -30,62 +30,67 @@
         </header>
         <!-- ---------------------------------- -->
         <!-- ----------------- main ----------------- -->
-        <main class="row align-items-center justify-content-center">
+        <main class="pt-3">
             <!-- ---------------------------------- -->
             <!-- ----------------- Contenedor form-img ----------------- -->
             <div class="container">
                 <div class="row">
-                    <h2 class="text-center">Inicio de sesión</h2>
+                    <h2 class="text-center text-indigo">Inicio de sesión</h2>
                 </div>
                 <!-- <div class="row">
                     <div class="col pt-5 pb-5"> -->
                 <!-- ----------------- Form ----------------- -->
-                <div class="container w-25 w-auto">
-                    <form id="idLoginForm" class="form-floating has-validation" action="" method="">
-                        <div
-                            class="d-flex flex-column justify-content-center align-items-center px-3 py-1 m-1 border-top border-5 border-dark rounded-3">
-                            <div class="input-group m-3 justify-content-center">
-                                <div class="input-group-text" style="background-color: white;"><i
-                                        class="fa fa-paper-plane"></i>
-                                </div>
-                                <div class="form-floating">
-                                    <input class="form-control" type="email" name="e-mail" id="idEmail"
-                                        placeholder="ejemplo@email.com" required>
-                                    <label class="form-label" for="e-mail">Introduce tu email</label>
-                                </div>
+
+
+                <form id="idLoginForm"
+                    class="row form-floating has-validation justify-content-center align-items-center" action=""
+                    method="">
+                    <div class="col-auto px-3 py-1 m-1 rounded-3 text-center">
+                        <div class="input-group my-3 justify-content-center">
+                            <div class="input-group-text rounded-start-pill" style="background-color: white;">
+                                <i class="fa fa-paper-plane text-indigo"></i>
                             </div>
-                            <div class="valid-feedback">Email correcto</div>
-                            <div class="invalid-feedback">Email incorrecto</div>
-                            <!-- ----------------- -->
-                            <div class="input-group justify-content-center">
-                                <div class="input-group-text" style="background-color: white;"><i
-                                        class="fa fa-lock"></i></div>
-                                <div class="form-floating">
-                                    <input class="form-control" type="password" name="password" id="idPassword"
-                                        placeholder="Contraseña" required>
-                                    <label class="form-label" for="password">Ingresa tu contraseña</label>
-                                </div>
+                            <div class="form-floating">
+                                <input class="form-control rounded-end-pill" type="email" name="e-mail" id="idEmail"
+                                    placeholder="ejemplo@email.com" required>
+                                <label class="form-label" for="e-mail">Introduce tu email</label>
+
                             </div>
-                            <div class="valid-feedback">Contraseña correcta</div>
-                            <div id="idLblInvalidPassword" class="invalid-feedback">Contraseña incorrecta</div>
-                            <!-- ----------------- -->
-                            <div class="form-check mt-1 mb-1">
-                                <label class="form-check-label" for="chckbox">Recuerdame en este
-                                    dispositivo</label>
-                                <input class="form-check-input" type="checkbox" name="chckbox" id="chckbox"
-                                    placeholder="Checkbox">
-                            </div>
-                            <!-- ----------------- -->
-                            <button type="button" class="btn btn-outline-dark mb-1" id="idInSesion">Iniciar
-                                sesión</button>
-                            <!-- <a id="idAnchrInSesion" href="#">log in</a> -->
-                            <a class="text-decoration-none link-danger" href="#">¿Olvidaste tu contraseña?</a>
-                            <!-- ----------------- -->
-                            <p class="m-0">¿Aún no tienes una cuenta?</p>
-                            <a class="text-decoration-none link-danger" href="#">Crear cuenta</a>
                         </div>
-                    </form>
-                </div>
+                        <!--  <div class="valid-feedback">Email correcto</div>
+                    <div class="invalid-feedback">Email incorrecto</div> -->
+                        <!-- ----------------- -->
+                        <div class="input-group my-3 justify-content-center">
+                            <div class="input-group-text rounded-start-pill" style="background-color: white;"><i
+                                    class="fa fa-lock text-indigo"></i></div>
+                            <div class="form-floating">
+                                <input class="form-control rounded-end-pill" type="password" name="password"
+                                    id="idPassword" placeholder="Contraseña" required>
+                                <label class="form-label" for="password">Ingresa tu contraseña</label>
+                            </div>
+                        </div>
+                        <!--  <div class="valid-feedback">Contraseña correcta</div>
+                    <div id="idLblInvalidPassword" class="invalid-feedback">Contraseña incorrecta</div> -->
+                        <!-- ----------------- -->
+                        <div class="form-check mt-1 mb-1 px-5">
+                            <label class="form-check-label" for="chckbox">Recuerdame en este
+                                dispositivo</label>
+                            <input class="form-check-input inpt-checked-indigo rounded-pill" type="checkbox"
+                                name="chckbox" id="chckbox" placeholder="Checkbox">
+                        </div>
+                        <!-- ----------------- -->
+                        <button type="submit"
+                            class="btn mb-1 bg-indigo text-light rounded-pill fw-bold w-100 btn-indigo-hover"
+                            id="idInSesion">Iniciar
+                            sesión</button>
+                        <!-- <a id="idAnchrInSesion" href="#">log in</a> -->
+                        <a class="text-decoration-none text-orange" href="#">¿Olvidaste tu contraseña?</a>
+                        <!-- ----------------- -->
+                        <p class="m-0">¿Aún no tienes una cuenta?</p>
+                        <a class="text-decoration-none text-orange" href="#">Crear cuenta</a>
+                    </div>
+                </form>
+
                 <!-- ------------------------ -->
 
                 <!-- ----------------- Imagen -------------------- ---->
@@ -108,8 +113,26 @@
         <!-- ------------------------------------------------------- ---->
 
         <!-- -------------------Footer----------------------- ---->
-        <!-- ------- Footer Plantilla Categories -------- -->
-        <footer class="text-muted">
+        <!-- --- footer product-info --- -->
+        <footer class="bg-dark text-white-50 pt-2 pb-3">
+            <div class="container">
+                <p class="float-end">
+                    <a class="text-orange text-decoration-none" href="#">Volver arriba</a>
+                </p>
+                <p>Este sitio forma parte de <a class="text-orange text-decoration-none"
+                        href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+                    2022</p>
+                <p>Clickea <a class="text-orange text-decoration-none" target="_blank" href="Letra.pdf">aquí</a> para
+                    descargar la
+                    letra del
+                    obligatorio.</p>
+            </div>
+        </footer>
+        <!-- --- fin footer product-info --- -->
+
+
+        <!-- ------- Footer Plantilla Categories (Prev activo) -------- -->
+        <!--  <footer class="text-muted">
             <div class="container">
                 <p class="float-end">
                     <a href="#">Volver arriba</a>
@@ -119,9 +142,8 @@
                     2022</p>
                 <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
             </div>
-        </footer>
-        <!-- -------- Fin Footer Plantilla Categories ----------- -->
-
+        </footer> -->
+        <!-- -------- Fin Footer Plantilla Categories (Prev activo) ----------- -->
 
         <!-- ----- Footer original ----- -->
         <!--  <footer class="row text-muted bg-dark ps-5 pe-5 pt-2 pb-1">
@@ -141,10 +163,11 @@
         </div>
     </footer> -->
         <!-- -------------- Fin Footer original ------------- ---->
-        <!-- </div> -->
-        <!-- ------- Fin Login original ------ ---->
+    </div>
+    <!-- ----------------- Contenedor general ??? ----------------- -->
+    <!-- ------- Fin Login original ------ ---->
 
-        <!-- ------------------------ -->
+    <!-- ------------------------ -->
 </body>
 
 </html>
